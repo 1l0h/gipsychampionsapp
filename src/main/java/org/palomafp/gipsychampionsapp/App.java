@@ -2,9 +2,7 @@ package org.palomafp.gipsychampionsapp;
 
 import java.util.List;
 
-import org.palomafp.gipsychampionsapp.modelo.Entrenador;
 import org.palomafp.gipsychampionsapp.modelo.Equipo;
-import org.palomafp.gipsychampionsapp.modelo.Estadio;
 import org.palomafp.gipsychampionsapp.modelo.Jugador;
 import org.palomafp.gipsychampionsapp.modelo.StatsTempJugador;
 
