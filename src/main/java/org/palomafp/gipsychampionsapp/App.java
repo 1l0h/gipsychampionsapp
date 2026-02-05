@@ -11,35 +11,32 @@ import org.palomafp.gipsychampionsapp.modelo.StatsTempJugador;
 public class App {
 
 	public static void main(String[] args) {
-		Equipo equipo = new Equipo(1, "Rayo Paloma", "Ciudad Paloma");
+		Equipo equipo = EquipoDAO.getDemo();
+		List<Jugador> jugadores = equipo.getJugadores();
 
-		Entrenador entrenador = new Entrenador(10, "Laura", "García", "12345678A");
-		entrenador.setEquipo(equipo);
-		equipo.setEntrenador(entrenador);
-
-		Estadio estadio = new Estadio(5, "Estadio de la Paloma", "Calle Pico 7");
-		estadio.setEquipo(equipo);
-		equipo.setEstadio(estadio);
-
-		Jugador j1 = new Jugador(7, "Lhanz", "Ochagavia", "87654321B");
-		Jugador j2 = new Jugador(8, "Isidoro", "Palacios", "23456789C");
-		j1.setEquipo(equipo);
-		j2.setEquipo(equipo);
-
-		List<Jugador> jugadores = List.of(j1, j2);
-		equipo.setJugadores(jugadores);
+		Jugador j1 = null;
+		Jugador j2 = null;
+		
+		if (jugadores != null && !jugadores.isEmpty()) {
+			j1 = jugadores.get(0);
+			if (jugadores.size() > 1) {
+				j2 = jugadores.get(1);
+			}
+		}
 
 		StatsTempJugador s1 = new StatsTempJugador(5, 2, 900, 1, 0, 0, j1);
 		StatsTempJugador s2 = new StatsTempJugador(3, 4, 820, 2, 0, 0, j2);
 
 		System.out.println("--- Ejemplo de objetos del modelo ---");
 		System.out.println(equipo);
-		System.out.println(entrenador);
-		System.out.println(estadio);
+		System.out.println(equipo.getJugadores());
+		System.out.println(equipo.getEstadio());
 
 		System.out.println("Jugadores:");
-		for (Jugador j : equipo.getJugadores()) {
-			System.out.println("  - " + j);
+		if (jugadores != null) {
+			for (Jugador j : jugadores) {
+				System.out.println("  - " + j);
+			}
 		}
 
 		System.out.println("\nStats temporales:");
