@@ -74,4 +74,10 @@ public class StatsTempJugador {
     public void setJugador(Jugador jugador) {
         this.jugador = jugador;
     }
+
+    @Override
+    public String toString() {
+        String jugadorInfo = (jugador != null) ? jugador.toString() : "null";
+        return "StatsTempJugador{goles=" + goles + ", asistencias=" + asistencias + ", minJugados=" + minJugados + ", tarjetasAmarillas=" + tarjetasAmarillas + ", tarjetasRojas=" + tarjetasRojas + ", porteriasACero=" + porteriasACero + ", jugador=[" + jugadorInfo + "]}";
+    }
 }

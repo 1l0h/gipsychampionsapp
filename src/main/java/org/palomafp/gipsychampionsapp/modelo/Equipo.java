@@ -63,4 +63,12 @@ public class Equipo {
     public void setJugadores(List<Jugador> jugadores) {
         this.jugadores = jugadores;
     }
+
+    @Override
+    public String toString() {
+        String entrenadorInfo = (entrenador != null) ? ("id=" + entrenador.getIdEntrenador() + ", nombre=" + entrenador.getNombre()) : "null";
+        String estadioInfo = (estadio != null) ? ("id=" + estadio.getIdEstadio() + ", nombre=" + estadio.getNombre()) : "null";
+        int jugadoresCount = (jugadores != null) ? jugadores.size() : 0;
+        return "Equipo{id=" + idEquipo + ", nombre=" + nombre + ", ciudad=" + ciudad + ", entrenador=[" + entrenadorInfo + "], estadio=[" + estadioInfo + "], jugadoresCount=" + jugadoresCount + "}";
+    }
 }

@@ -53,4 +53,10 @@ public class Jugador {
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
+
+    @Override
+    public String toString() {
+        String equipoInfo = (equipo != null) ? ("id=" + equipo.getIdEquipo() + ", nombre=" + equipo.getNombre()) : "null";
+        return "Jugador{id=" + idJugador + ", nombre=" + nombre + ", primerApellido=" + primerApellido + ", dniNif=" + dniNif + ", equipo=[" + equipoInfo + "]}";
+    }
 }

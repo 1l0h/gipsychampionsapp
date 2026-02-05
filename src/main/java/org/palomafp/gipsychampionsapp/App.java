@@ -33,18 +33,18 @@ public class App {
 		StatsTempJugador s2 = new StatsTempJugador(3, 4, 820, 2, 0, 0, j2);
 
 		System.out.println("--- Ejemplo de objetos del modelo ---");
-		System.out.println("Equipo: " + equipo.getNombre() + " (" + equipo.getCiudad() + ")");
-		System.out.println("Entrenador: " + entrenador.getNombre() + " " + entrenador.getPrimerApellido() + " - DNI: " + entrenador.getDniNif());
-		System.out.println("Estadio: " + estadio.getNombre() + " - " + estadio.getDireccion());
+		System.out.println(equipo);
+		System.out.println(entrenador);
+		System.out.println(estadio);
 
 		System.out.println("Jugadores:");
 		for (Jugador j : equipo.getJugadores()) {
-			System.out.println("  - " + j.getIdJugador() + ": " + j.getNombre() + " " + j.getPrimerApellido() + " (DNI: " + j.getDniNif() + ")");
+			System.out.println("  - " + j);
 		}
 
 		System.out.println("\nStats temporales:");
-		System.out.println("  " + s1.getJugador().getNombre() + ": goles=" + s1.getGoles() + ", asistencias=" + s1.getAsistencias() + ", minutos=" + s1.getMinJugados());
-		System.out.println("  " + s2.getJugador().getNombre() + ": goles=" + s2.getGoles() + ", asistencias=" + s2.getAsistencias() + ", minutos=" + s2.getMinJugados());
+		System.out.println("  " + s1);
+		System.out.println("  " + s2);
 	}
 
 }
