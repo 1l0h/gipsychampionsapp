@@ -8,9 +8,9 @@ import org.palomafp.gipsychampionsapp.modelo.Equipo;
 public class EquipoDAOTest {
     
     @Test
-    public void testGetEquipoDemo() {
-        EquipoDAO dao = new EquipoDAO();
-        Equipo equipo = dao.getEquipoDemo();
-        assertTrue(equipo != null);
+    public void testGetEquipoAleatorio() {
+        EquipoDAO equipoDAO = new EquipoDAO();
+        Equipo equipoAleatorio = equipoDAO.getEquipoAleatorio();
+        assertTrue(equipoDAO.getArrayList().contains(equipoAleatorio));
     }
 }

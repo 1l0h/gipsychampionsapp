@@ -11,7 +11,7 @@ public class EquipoDAO {
         listaEquipo.add(new Equipo(0, "Real Vardrid", "Madrid"));
         listaEquipo.add(new Equipo(1, "Varcelona", "Barcelona"));
         listaEquipo.add(new Equipo(3, "Patético de Madrid", "Madrid"));
-        listaEquipo.add(new Equipo(4, "Los Morrocotunos", "Distrito San Blas-Canillejas-Ciudad Lineal"));
+        listaEquipo.add(new Equipo(4, "Los Morrocotudos", "Distrito San Blas-Canillejas-Ciudad Lineal"));
     }
 
     public Equipo getEquipoPorIndice(int indice) {
