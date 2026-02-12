@@ -10,32 +10,22 @@ import org.palomafp.gipsychampionsapp.modelo.Jugador;
 
 public class EquipoDAO {
 
-    public Equipo getEquipoDemo() {
-        Equipo equipo = new Equipo(1, "Rayo Paloma", "Ciudad Paloma");
+    private ArrayList<Equipo> listaEquipo = new ArrayList<Equipo>();
 
-        Entrenador entrenador = new Entrenador(10, "Luis Enrique", "MArtínez", "12345678A");
-        entrenador.setEquipo(equipo);
-        equipo.setEntrenador(entrenador);
-
-        Estadio estadio = new Estadio(5, "Estadio de la Paloma", "Calle Pico 7");
-        estadio.setEquipo(equipo);
-        equipo.setEstadio(estadio);
-
-        Jugador j1 = new Jugador(7, "Lhanz", "Ochagavia", "87654321B");
-        Jugador j2 = new Jugador(8, "Isidoro", "Palacios", "23456789C");
-        j1.setEquipo(equipo);
-        j2.setEquipo(equipo);
-
-        List<Jugador> jugadores = new ArrayList<>();
-        jugadores.add(j1);
-        jugadores.add(j2);
-        equipo.setJugadores(jugadores);
-
-        return equipo;
+    public EquipoDAO() {
+        listaEquipo.add(new Equipo(0, "Real Vardrid", "Madrid"));
+        listaEquipo.add(new Equipo(1, "Varcelona", "Barcelona"));
     }
 
-    public static Equipo getDemo() {
-        return new EquipoDAO().getEquipoDemo();
+    public Equipo getEquipoPorIndice(int indice){
+        return listaEquipo.get(indice);
     }
 
+    public ArrayList<Equipo> getArrayList() {
+        return listaEquipo;
+    }
+
+    public Equipo getEquipoAleatorio() {
+        return listaEquipo.get(Math.random() * (listaEquipo.size - 1) + 0);
+    }
 }
