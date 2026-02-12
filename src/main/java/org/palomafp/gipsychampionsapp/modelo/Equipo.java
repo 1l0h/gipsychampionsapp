@@ -77,6 +77,17 @@ public class Equipo {
 
         int jugadoresCount = (jugadores != null) ? jugadores.size() : 0;
 
+        StringBuilder listaJugadores = new StringBuilder();
+
+        if (jugadores != null && !jugadores.isEmpty()) {
+            for (Jugador j : jugadores) {
+                listaJugadores.append("\n║   - ")
+                        .append(j.toString());
+            }
+        } else {
+            listaJugadores.append("\n║   Sin jugadores");
+        }
+
         return "\n╔══════════════════════════════╗" +
                 "\n║          " + nombre.toUpperCase() +
                 "\n╠══════════════════════════════╣" +
@@ -85,6 +96,8 @@ public class Equipo {
                 "\n║ Entrenador: " + entrenadorInfo +
                 "\n║ Estadio: " + estadioInfo +
                 "\n║ Nº Jugadores: " + jugadoresCount +
+                "\n║ Jugadores:" +
+                listaJugadores +
                 "\n╚══════════════════════════════╝";
     }
 
