@@ -1,12 +1,7 @@
 package org.palomafp.gipsychampionsapp;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import org.palomafp.gipsychampionsapp.modelo.Entrenador;
 import org.palomafp.gipsychampionsapp.modelo.Equipo;
-import org.palomafp.gipsychampionsapp.modelo.Estadio;
-import org.palomafp.gipsychampionsapp.modelo.Jugador;
 
 public class EquipoDAO {
 
@@ -26,6 +21,10 @@ public class EquipoDAO {
     }
 
     public Equipo getEquipoAleatorio() {
-        return listaEquipo.get(Math.random() * (listaEquipo.size - 1) + 0);
+        return listaEquipo.get((int) Math.random() * (listaEquipo.size() - 1) + 0);
+    }
+
+    public void addEquipo(int idEquipo, String nombreEquipo, String ciudadEquipo){
+        
     }
 }
