@@ -27,11 +27,14 @@ public class EquipoDAO {
     }
 
     public void addEquipo(int idEquipo, String nombreEquipo, String ciudadEquipo) {
-        boolean estaDisponible = false;
+        boolean estaDisponible = true;
         for (int i = 0; i < listaEquipo.size(); i++) {
             if (listaEquipo.get(i).getIdEquipo() == idEquipo) {
-
+                estaDisponible = false;
             }
+        }
+        if (estaDisponible == true) {
+            listaEquipo.add(new Equipo(idEquipo, nombreEquipo, ciudadEquipo));
         }
     }
 }
