@@ -1,5 +1,6 @@
 package org.palomafp.gipsychampionsapp;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class App {
 		Scanner sc = new Scanner(System.in);
 		List<Equipo> listaEquipo = new EquipoDAO().getArrayList();
 		EquipoDAO equipo = new EquipoDAO();
-		int respuesta, respuesta2;
+		int respuesta = 0, respuesta2 = 0;
 
 		do {
 			System.out.println("LIGA MORROCOTUDA");
@@ -21,7 +22,11 @@ public class App {
 			System.out.println("2. Equipo por Id");
 			System.out.println("3. Todos los equipos");
 			System.out.println("4. Salir");
-			respuesta = sc.nextInt();
+			try {
+				respuesta = sc.nextInt();
+			} catch (InputMismatchException e) {
+				System.err.println("Eso no es un número, compañerete");
+			}
 
 			switch (respuesta) {
 				case 1:
@@ -32,7 +37,13 @@ public class App {
 					for (int i = 0; i < listaEquipo.size(); i++){
 						System.out.println((i + 1) + ". " + listaEquipo.get(i).getNombre());
 					}
-					respuesta2 = sc.nextInt();
+				try {
+					respuesta2 = sc.nextInt();	
+				} catch (IndexOutOfBoundsException e) {
+					System.err.println("Ese número no está en el índice,  compañerete");
+				} catch (InputMismatchException e) {
+					System.err.println("Eso no es un número, compañerete");
+				}
 					System.out.println("Equipo elegido: " + listaEquipo.get(respuesta2 - 1).getNombre());
 					break;
 
@@ -49,7 +60,7 @@ public class App {
 					System.out.println("Ese número no es válido compañerete");
 					break;
 			}
-		} while (respuesta != 3);
+		} while (respuesta != 4);
 
 		sc.close();
 	}
