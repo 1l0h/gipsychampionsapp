@@ -25,7 +25,7 @@ public class App {
 
 			switch (respuesta) {
 				case 1:
-				System.out.println("Equipo Random: " + new EquipoDAO().getEquipoAleatorio());
+				System.out.println("Equipo Random: " + equipo.getEquipoAleatorio().getNombre());
 					break;
 
 				case 2:
@@ -33,11 +33,13 @@ public class App {
 						System.out.println((i + 1) + ". " + listaEquipo.get(i).getNombre());
 					}
 					respuesta2 = sc.nextInt();
-					System.out.println(listaEquipo.get(respuesta2 - 1).getNombre());
+					System.out.println("Equipo elegido: " + listaEquipo.get(respuesta2 - 1).getNombre());
 					break;
 
 				case 3:
-
+					for (int i = 0; i < listaEquipo.size(); i++){
+						System.out.println((i + 1) + ". " + listaEquipo.get(i).getNombre());
+					}
 					break;
 				case 4:
 					System.out.println("Saliendo...");
@@ -48,6 +50,8 @@ public class App {
 					break;
 			}
 		} while (respuesta != 3);
+
+		sc.close();
 	}
 
 }
