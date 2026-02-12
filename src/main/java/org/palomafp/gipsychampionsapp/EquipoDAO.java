@@ -10,9 +10,11 @@ public class EquipoDAO {
     public EquipoDAO() {
         listaEquipo.add(new Equipo(0, "Real Vardrid", "Madrid"));
         listaEquipo.add(new Equipo(1, "Varcelona", "Barcelona"));
+        listaEquipo.add(new Equipo(3, "Patético de Madrid", "Madrid"));
+        listaEquipo.add(new Equipo(4, "Los Morrocotunos", "Distrito San Blas-Canillejas-Ciudad Lineal"));
     }
 
-    public Equipo getEquipoPorIndice(int indice){
+    public Equipo getEquipoPorIndice(int indice) {
         return listaEquipo.get(indice);
     }
 
@@ -24,7 +26,12 @@ public class EquipoDAO {
         return listaEquipo.get((int) Math.random() * (listaEquipo.size() - 1) + 0);
     }
 
-    public void addEquipo(int idEquipo, String nombreEquipo, String ciudadEquipo){
-        
+    public void addEquipo(int idEquipo, String nombreEquipo, String ciudadEquipo) {
+        boolean estaDisponible = false;
+        for (int i = 0; i < listaEquipo.size(); i++) {
+            if (listaEquipo.get(i).getIdEquipo() == idEquipo) {
+
+            }
+        }
     }
 }
