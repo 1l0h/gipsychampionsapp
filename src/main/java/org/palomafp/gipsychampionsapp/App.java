@@ -1,12 +1,17 @@
 package org.palomafp.gipsychampionsapp;
 
+import java.util.List;
 import java.util.Scanner;
+
+import org.palomafp.gipsychampionsapp.modelo.Equipo;
 
 public class App {
 
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		List<Equipo> listaEquipo = new EquipoDAO().getArrayList();
+		EquipoDAO equipo = new EquipoDAO();
 		int respuesta, respuesta2;
 
 		do {
@@ -20,13 +25,17 @@ public class App {
 
 			switch (respuesta) {
 				case 1:
+				System.out.println("Equipo Random: " + new EquipoDAO().getEquipoAleatorio());
+					break;
 
-					break;
 				case 2:
-					for (int i = 0; i < 10; i++){
-						System.out.println((i + 1) + ". ");
+					for (int i = 0; i < listaEquipo.size(); i++){
+						System.out.println((i + 1) + ". " + listaEquipo.get(i).getNombre());
 					}
+					respuesta2 = sc.nextInt();
+					System.out.println(listaEquipo.get(respuesta2 - 1).getNombre());
 					break;
+
 				case 3:
 
 					break;
