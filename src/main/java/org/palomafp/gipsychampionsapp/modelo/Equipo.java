@@ -66,9 +66,26 @@ public class Equipo {
 
     @Override
     public String toString() {
-        String entrenadorInfo = (entrenador != null) ? ("id=" + entrenador.getIdEntrenador() + ", nombre=" + entrenador.getNombre()) : "null";
-        String estadioInfo = (estadio != null) ? ("id=" + estadio.getIdEstadio() + ", nombre=" + estadio.getNombre()) : "null";
+
+        String entrenadorInfo = (entrenador != null)
+                ? entrenador.getNombre() + " (ID: " + entrenador.getIdEntrenador() + ")"
+                : "Sin entrenador";
+
+        String estadioInfo = (estadio != null)
+                ? estadio.getNombre() + " (ID: " + estadio.getIdEstadio() + ")"
+                : "Sin estadio";
+
         int jugadoresCount = (jugadores != null) ? jugadores.size() : 0;
-        return "Equipo{id=" + idEquipo + ", nombre=" + nombre + ", ciudad=" + ciudad + ", entrenador=[" + entrenadorInfo + "], estadio=[" + estadioInfo + "], jugadoresCount=" + jugadoresCount + "}";
+
+        return "\n╔══════════════════════════════╗" +
+                "\n║          " + nombre.toUpperCase() +
+                "\n╠══════════════════════════════╣" +
+                "\n║ ID: " + idEquipo +
+                "\n║ Ciudad: " + ciudad +
+                "\n║ Entrenador: " + entrenadorInfo +
+                "\n║ Estadio: " + estadioInfo +
+                "\n║ Nº Jugadores: " + jugadoresCount +
+                "\n╚══════════════════════════════╝";
     }
+
 }
