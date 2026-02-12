@@ -56,7 +56,7 @@ public class Jugador {
 
     @Override
     public String toString() {
-        String equipoInfo = (equipo != null) ? ("id=" + equipo.getIdEquipo() + ", nombre=" + equipo.getNombre()) : "null";
-        return "Jugador{id=" + idJugador + ", nombre=" + nombre + ", primerApellido=" + primerApellido + ", dniNif=" + dniNif + ", equipo=[" + equipoInfo + "]}";
+        return String.format("Jugador %d - %s %s (DNI: %s)",
+            idJugador, nombre, primerApellido, dniNif);
     }
 }
