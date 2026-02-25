@@ -1,5 +1,7 @@
 package org.palomafp.gipsychampionsapp;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
@@ -17,17 +19,15 @@ public class EquipoDAOTest {
     }
 
     @Test
-    public void addEquipo(){
-        EquipoDAO equipoDAO = new EquipoDAO();
-        ArrayList<Equipo> listaEquipo = new ArrayList<>();
-        boolean estaDisponible = true;
-
-        for (int i = 0; i < listaEquipo.size(); i++) {
-            if (listaEquipo.get(i).getIdEquipo() == idEquipo.) {
-                estaDisponible = false;
-            }
+    public void testGetEquipoPorIndice(){
+        EquipoDAO equipoDao = new EquipoDAO();
+        assertEquals(equipoDao.getEquipoPorIndice(0), equipoDao.getEquipoPorIndice(0));
     }
 
-    
+    @Test
+    public void testAddEquipoEquipoExistente(){
+        EquipoDAO equipoDao = new EquipoDAO();
+        assertFalse(equipoDao.addEquipo(0, null, null));
+    }
 }
 

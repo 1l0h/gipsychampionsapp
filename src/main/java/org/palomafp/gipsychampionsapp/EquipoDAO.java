@@ -72,7 +72,7 @@ public class EquipoDAO {
         return listaEquipo.get((int) Math.random() * (listaEquipo.size() - 1) + 0);
     }
 
-    public void addEquipo(int idEquipo, String nombreEquipo, String ciudadEquipo) {
+    public boolean addEquipo(int idEquipo, String nombreEquipo, String ciudadEquipo) {
         boolean estaDisponible = true;
         for (int i = 0; i < listaEquipo.size(); i++) {
             if (listaEquipo.get(i).getIdEquipo() == idEquipo) {
@@ -82,5 +82,6 @@ public class EquipoDAO {
         if (estaDisponible == true) {
             listaEquipo.add(new Equipo(idEquipo, nombreEquipo, ciudadEquipo));
         }
+        return estaDisponible;
     }
 }
