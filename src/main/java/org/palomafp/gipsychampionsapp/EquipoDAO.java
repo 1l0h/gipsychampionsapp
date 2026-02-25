@@ -64,7 +64,7 @@ public class EquipoDAO {
         return listaEquipo.get(indice);
     }
 
-    public ArrayList<Equipo> getArrayList() {
+    public ArrayList<Equipo> getAllEquipos() {
         return listaEquipo;
     }
 
