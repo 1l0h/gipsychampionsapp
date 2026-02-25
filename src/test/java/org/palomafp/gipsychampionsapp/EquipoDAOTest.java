@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.palomafp.gipsychampionsapp.modelo.Equipo;
 
 public class EquipoDAOTest {
-    
+
     @Test
     public void testGetEquipoAleatorio() {
         EquipoDAO equipoDAO = new EquipoDAO();
@@ -17,13 +17,19 @@ public class EquipoDAOTest {
     }
 
     @Test
-    public void testGetEquipoPorIndice(){
+    public void testGetEquipoPorIndice() {
         EquipoDAO equipoDao = new EquipoDAO();
         assertEquals(equipoDao.getEquipoPorIndice(0), equipoDao.getEquipoPorIndice(0));
     }
 
     @Test
-    public void testAddEquipoEquipoExistente(){
+    public void testGetArrayList() {
+        EquipoDAO equipoDao = new EquipoDAO();
+        assertTrue(equipoDao.getArrayList().size() > 1);
+    }
+
+    @Test
+    public void testAddEquipoEquipoExistente() {
         EquipoDAO equipoDao = new EquipoDAO();
         assertFalse(equipoDao.addEquipo(0, null, null));
     }
