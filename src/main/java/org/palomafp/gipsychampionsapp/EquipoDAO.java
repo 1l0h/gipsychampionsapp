@@ -13,7 +13,7 @@ public class EquipoDAO {
     private ArrayList<Equipo> listaEquipo = new ArrayList<Equipo>();
 
     public EquipoDAO() {
-        //Creación Real Vardrid
+        // Creación Real Vardrid
         listaEquipo.add(new Equipo(0, "Real Vardrid", "Madrid"));
         Entrenador entrenador1 = new Entrenador(0, "Chavi", "San Ildefonso", "papoi");
         Estadio estadio1 = new Estadio(0, "Anchoneu", "Chamartín");
@@ -24,7 +24,7 @@ public class EquipoDAO {
         listaEquipo.get(0).setEstadio(estadio1);
         listaEquipo.get(0).setJugadores(listaJugadores1);
 
-        //Creación Varcelona
+        // Creación Varcelona
         listaEquipo.add(new Equipo(1, "Varcelona", "Barcelona"));
         Entrenador entrenador2 = new Entrenador(1, "Jansi", "Musty Flick", "Alemán");
         Estadio estadio2 = new Estadio(1, "Campo nuevo", "Rocafonda 304");
@@ -35,7 +35,7 @@ public class EquipoDAO {
         listaEquipo.get(1).setEstadio(estadio2);
         listaEquipo.get(1).setJugadores(listaJugadores2);
 
-        //Creación Patético de Madrid
+        // Creación Patético de Madrid
         listaEquipo.add(new Equipo(2, "Patético de Madrid", "Madrid"));
         Entrenador entrenador3 = new Entrenador(2, "Chulo", "Sin peones", "Mate");
         Estadio estadio3 = new Estadio(2, "Estadio Napolitano", "Canillejas Mierda");
@@ -46,7 +46,7 @@ public class EquipoDAO {
         listaEquipo.get(2).setEstadio(estadio3);
         listaEquipo.get(2).setJugadores(listaJugadores3);
 
-        //Creación Los Morrocotudos
+        // Creación Los Morrocotudos
         listaEquipo.add(new Equipo(3, "Los Morrocotudos", "Distrito San Blas-Canillejas-Ciudad Lineal"));
         Entrenador entrenador4 = new Entrenador(3, "MariCarmen", "No me acuerdo", "72839163A");
         Estadio estadio4 = new Estadio(3, "Patio La Paloma", "IES Virgen de la Paloma");

@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.util.ArrayList;
-
 import org.junit.jupiter.api.Test;
 import org.palomafp.gipsychampionsapp.modelo.Equipo;
 
@@ -19,15 +17,20 @@ public class EquipoDAOTest {
     }
 
     @Test
-    public void testGetEquipoPorIndice(){
+    public void testGetEquipoPorIndice() {
         EquipoDAO equipoDao = new EquipoDAO();
         assertEquals(equipoDao.getEquipoPorIndice(0), equipoDao.getEquipoPorIndice(0));
     }
 
     @Test
-    public void testAddEquipoEquipoExistente(){
+    public void testAddEquipoEquipoExistente() {
         EquipoDAO equipoDao = new EquipoDAO();
         assertFalse(equipoDao.addEquipo(0, null, null));
     }
-}
 
+    @Test
+    public void testAddEquipoEquipoNoExistente() {
+        EquipoDAO equipoDao = new EquipoDAO();
+        assertTrue(equipoDao.addEquipo(8, "FCBarcelona", "Barcelona"));
+    }
+}
