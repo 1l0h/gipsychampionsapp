@@ -23,6 +23,12 @@ public class EquipoDAOTest {
     }
 
     @Test
+    public void testGetArrayList() {
+        EquipoDAO equipoDao = new EquipoDAO();
+        assertTrue(equipoDao.getArrayList().size() > 1);
+    }
+
+    @Test
     public void testAddEquipoEquipoExistente() {
         EquipoDAO equipoDao = new EquipoDAO();
         assertFalse(equipoDao.addEquipo(0, null, null));
