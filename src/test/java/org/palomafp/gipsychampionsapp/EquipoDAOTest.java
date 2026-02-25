@@ -16,7 +16,11 @@ public class EquipoDAOTest {
     public void testGetEquipoAleatorio() {
         EquipoDAO equipoDAO = new EquipoDAO();
         Equipo equipoAleatorio = equipoDAO.getEquipoAleatorio();
-        assertTrue(equipoDAO.getAllEquipos().contains(equipoAleatorio));
+        assertTrue(equipoDAO.getAllEquipos().contains(equipoAleatorio),
+                "El equipo no forma parte de la lista de equipos");
+        assertNotNull(equipoAleatorio, "El equipo no debería ser una posición vacía");
+        assertNotNull(equipoAleatorio.getIdEquipo(), "El equipo debe tener un id");
+        assertTrue(equipoAleatorio.getEntrenador() != null, "El equipo debe tener un entrenador");
     }
 
     @Test
@@ -26,7 +30,17 @@ public class EquipoDAOTest {
 
         assertNotNull(equipoCero);
         assertEquals("Real Vardrid", equipoCero.getNombre());
-        assertNotNull(equipoCero.getEntrenador(), "Entrenador");
+        assertNotNull(equipoCero.getEntrenador(), "El entrenador no es correcto");
+    }
+
+    @Test
+    public void testGetEquipoPorIndiceFinal() {
+        EquipoDAO equipoDao = new EquipoDAO();
+        Equipo equipoFinal = equipoDao.getEquipoPorIndice(3);
+
+        assertNotNull(equipoFinal);
+        assertEquals("Los Morrocotudos", equipoFinal.getNombre());
+        assertNotNull(equipoFinal.getEntrenador(), "El entrenador no es correcto");
     }
 
     @Test
