@@ -12,7 +12,7 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
         EquipoDAO equipoDAO = new EquipoDAO();
-        List<Equipo> listaEquipo = equipoDAO.getArrayList();
+        List<Equipo> listaEquipo = equipoDAO.getAllEquipos();
 
         int respuesta = 0;
         int respuesta2 = 0;
