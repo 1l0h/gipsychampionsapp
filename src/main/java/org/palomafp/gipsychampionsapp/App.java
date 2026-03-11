@@ -6,18 +6,33 @@ import java.util.Scanner;
 
 import org.palomafp.gipsychampionsapp.modelo.Equipo;
 
+/**
+ * Clase de ejecución del programa de equipos
+ * @author Sandoval y Lobato
+ * @version 1.0
+ */
 public class App {
 
+    /**
+     * Función principal para la ejecución del programa
+     * @param args posibles argumentos introducidos
+     */
     public static void main(String[] args) {
 
+        //atributo escáner
         Scanner sc = new Scanner(System.in);
+        //instancia del objeto EquipoDAO
         EquipoDAO equipoDAO = new EquipoDAO();
+        //List en el que almacenaremos la colección de equipos
         List<Equipo> listaEquipo = equipoDAO.getAllEquipos();
 
+        //atributos que se usarán para responder el menú
         int respuesta = 0;
         int respuesta2 = 0;
 
+        //Bucle que se repetirá hasta que la opción introducida sea la de salir
         do {
+            //impresión del menú
             System.out.println("\nLIGA MORROCOTUDA");
             System.out.println("----------------");
             System.out.println("1. Equipo Random");
@@ -25,6 +40,7 @@ public class App {
             System.out.println("3. Todos los equipos");
             System.out.println("4. Salir");
 
+            //almacena la respuesta introducida por teclado y controla que no sea incorrecta, en caso de que sí lo fuese, mostraría un error.
             try {
                 respuesta = sc.nextInt();
             } catch (InputMismatchException e) {
