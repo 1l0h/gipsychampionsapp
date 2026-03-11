@@ -48,17 +48,16 @@ public class EquipoDAOTest {
         EquipoDAO equipoDao = new EquipoDAO();
         ArrayList<Equipo> equipos = equipoDao.getAllEquipos();
         assertEquals(4, equipos.size());
+        assertTrue(equipos.get(0).getEntrenador().getNombre().equals("Chavi"),
+                "El entrenador del equipo 0 no se ha determinado correctamente");
+        assertTrue(equipos.get(3).getJugadores().get(6).getNombre().equals("Sandofoca"),
+                "El jugador con id 6 del equipo con id 3 no es Sandofoca, por lo que es incorrecto.");
     }
 
     @Test
-    public void testAddEquipoEquipoExistente() {
+    public void testAddEquipoEquipo() {
         EquipoDAO equipoDao = new EquipoDAO();
-        assertFalse(equipoDao.addEquipo(0, null, null));
-    }
-
-    @Test
-    public void testAddEquipoEquipoNoExistente() {
-        EquipoDAO equipoDao = new EquipoDAO();
+        assertFalse(equipoDao.addEquipo(0, null, null), "El equipo con id 0 no debería ser nulo.");
         assertTrue(equipoDao.addEquipo(8, "FCBarcelona", "Barcelona"));
     }
 }
