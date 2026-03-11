@@ -37,7 +37,6 @@ public class EquipoDAOTest {
     public void testGetEquipoPorIndiceFinal() {
         EquipoDAO equipoDao = new EquipoDAO();
         Equipo equipoFinal = equipoDao.getEquipoPorIndice(3);
-
         assertNotNull(equipoFinal);
         assertEquals("Los Morrocotudos", equipoFinal.getNombre());
         assertNotNull(equipoFinal.getEntrenador(), "El entrenador no es correcto");
