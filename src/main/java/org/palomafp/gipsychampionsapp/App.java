@@ -8,11 +8,17 @@ import org.palomafp.gipsychampionsapp.modelo.Equipo;
 
 /**
  * Clase de ejecución del programa de equipos
- * 
+ *
  * @author Sandoval y Lobato
  * @version 1.0
  */
 public class App {
+
+    /**
+     * Constructor por defecto
+     */
+    public App() {
+    }
 
     /**
      * Función principal para la ejecución del programa
