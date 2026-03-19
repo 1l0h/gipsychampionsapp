@@ -55,7 +55,10 @@ public class App {
             } catch (InputMismatchException e) {
                 System.err.println("Eso no es un número, compañerete");
                 sc.nextLine();
-                respuesta = 0;
+                respuesta = 4;
+                // En caso de error hay que asignar respuesta a 4 para que en el doble output
+                // ponga Saliendo... en vez
+                // del default
             }
 
             // Switch que comprobará la entrada introducida anteriormente
