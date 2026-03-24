@@ -2,6 +2,7 @@ package org.palomafp.gipsychampionsapp.modelo;
 
 /**
  * Clase que representa el estadio de un equipo
+ *
  * @author Sandoval y Lobato
  */
 public class Estadio {
@@ -21,9 +22,9 @@ public class Estadio {
 
     /**
      * Constructor para instanciar un estadio con todos sus atributos
-     * 
+     *
      * @param idEstadio entero con su id
-     * @param nombre    string con su nombre
+     * @param nombre string con su nombre
      * @param direccion string con su dirección
      */
     public Estadio(int idEstadio, String nombre, String direccion) {
@@ -34,10 +35,9 @@ public class Estadio {
 
     // Getters & Setters
     // Getters
-
     /**
      * Getter del id
-     * 
+     *
      * @return id del estadio
      */
     public int getIdEstadio() {
@@ -46,7 +46,7 @@ public class Estadio {
 
     /**
      * Getter del nombre
-     * 
+     *
      * @return nombre del estadio
      */
     public String getNombre() {
@@ -55,7 +55,7 @@ public class Estadio {
 
     /**
      * Getter de la dirección
-     * 
+     *
      * @return dirección del estadio
      */
     public String getDireccion() {
@@ -64,7 +64,7 @@ public class Estadio {
 
     /**
      * Getter del equipo
-     * 
+     *
      * @return equipo al que pertenece el estadio
      */
     public Equipo getEquipo() {
@@ -72,10 +72,9 @@ public class Estadio {
     }
 
     // Setters
-
     /**
      * Setter del id
-     * 
+     *
      * @param idEstadio nuevo id del estadio
      */
     public void setIdEstadio(int idEstadio) {
@@ -84,7 +83,7 @@ public class Estadio {
 
     /**
      * Setter del nombre
-     * 
+     *
      * @param nombre nuevo nombre del estadio
      */
     public void setNombre(String nombre) {
@@ -93,7 +92,7 @@ public class Estadio {
 
     /**
      * Setter de la dirección
-     * 
+     *
      * @param direccion nueva dirección del estadio
      */
     public void setDireccion(String direccion) {
@@ -102,7 +101,7 @@ public class Estadio {
 
     /**
      * Setter del equipo
-     * 
+     *
      * @param equipo nuevo equipo al que pertenece el estadio
      */
     public void setEquipo(Equipo equipo) {
@@ -110,9 +109,9 @@ public class Estadio {
     }
 
     /**
-     * to String sobreescrito para mostrar la información del estadio de forma clara
-     * y estructurada
-     * incluyendo la información del equipo al que pertenece
+     * to String sobreescrito para mostrar la información del estadio de forma
+     * clara y estructurada incluyendo la información del equipo al que
+     * pertenece
      */
     @Override
     public String toString() {

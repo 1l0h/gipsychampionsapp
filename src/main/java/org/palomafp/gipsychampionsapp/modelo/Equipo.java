@@ -4,6 +4,7 @@ import java.util.List;
 
 /**
  * Clase que representa un equipo de fútbol
+ *
  * @author Sandoval y Lobato
  */
 public class Equipo {
@@ -29,10 +30,10 @@ public class Equipo {
 
     /**
      * Constructor para instanciar un equipo con sus atributos básicos
-     * 
+     *
      * @param idEquipo entero con su id
-     * @param nombre   string con su nombre
-     * @param ciudad   string con su ciudad
+     * @param nombre string con su nombre
+     * @param ciudad string con su ciudad
      */
     public Equipo(int idEquipo, String nombre, String ciudad) {
         this.idEquipo = idEquipo;
@@ -42,10 +43,9 @@ public class Equipo {
 
     // Getters & Setters
     // Getters
-
     /**
      * Getter del id
-     * 
+     *
      * @return id del equipo
      */
     public int getIdEquipo() {
@@ -54,7 +54,7 @@ public class Equipo {
 
     /**
      * Getter del nombre
-     * 
+     *
      * @return nombre del equipo
      */
     public String getNombre() {
@@ -63,7 +63,7 @@ public class Equipo {
 
     /**
      * Getter de la ciudad
-     * 
+     *
      * @return ciudad del equipo
      */
     public String getCiudad() {
@@ -72,7 +72,7 @@ public class Equipo {
 
     /**
      * Getter del entrenador
-     * 
+     *
      * @return entrenador del equipo
      */
     public Entrenador getEntrenador() {
@@ -81,7 +81,7 @@ public class Equipo {
 
     /**
      * Getter del estadio
-     * 
+     *
      * @return estadio del equipo
      */
     public Estadio getEstadio() {
@@ -90,7 +90,7 @@ public class Equipo {
 
     /**
      * Getter de la lista de jugadores
-     * 
+     *
      * @return lista de jugadores del equipo
      */
     public List<Jugador> getJugadores() {
@@ -98,10 +98,9 @@ public class Equipo {
     }
 
     // Setters
-
     /**
      * Setter del id
-     * 
+     *
      * @param idEquipo a atribuir para el equipo
      */
     public void setIdEquipo(int idEquipo) {
@@ -110,7 +109,7 @@ public class Equipo {
 
     /**
      * Setter del nombre
-     * 
+     *
      * @param nombre a atribuir para el equipo
      */
     public void setNombre(String nombre) {
@@ -119,7 +118,7 @@ public class Equipo {
 
     /**
      * Setter de la ciudad
-     * 
+     *
      * @param ciudad a atribuir para el equipo
      */
     public void setCiudad(String ciudad) {
@@ -128,7 +127,7 @@ public class Equipo {
 
     /**
      * Setter del entrenador
-     * 
+     *
      * @param entrenador a atribuir para el equipo
      */
     public void setEntrenador(Entrenador entrenador) {
@@ -137,7 +136,7 @@ public class Equipo {
 
     /**
      * Setter del estadio
-     * 
+     *
      * @param estadio a atribuir para el equipo
      */
     public void setEstadio(Estadio estadio) {
@@ -146,7 +145,7 @@ public class Equipo {
 
     /**
      * Setter de la lista de jugadores
-     * 
+     *
      * @param jugadores a atribuir para el equipo
      */
     public void setJugadores(List<Jugador> jugadores) {
@@ -181,17 +180,17 @@ public class Equipo {
             listaJugadores.append("\n║   Sin jugadores");
         }
 
-        return "\n╔══════════════════════════════╗" +
-                "\n║          " + nombre.toUpperCase() +
-                "\n╠══════════════════════════════╣" +
-                "\n║ ID: " + idEquipo +
-                "\n║ Ciudad: " + ciudad +
-                "\n║ Entrenador: " + entrenadorInfo +
-                "\n║ Estadio: " + estadioInfo +
-                "\n║ Nº Jugadores: " + jugadoresCount +
-                "\n║ Jugadores:" +
-                listaJugadores +
-                "\n╚══════════════════════════════╝";
+        return "\n╔══════════════════════════════╗"
+                + "\n║          " + nombre.toUpperCase()
+                + "\n╠══════════════════════════════╣"
+                + "\n║ ID: " + idEquipo
+                + "\n║ Ciudad: " + ciudad
+                + "\n║ Entrenador: " + entrenadorInfo
+                + "\n║ Estadio: " + estadioInfo
+                + "\n║ Nº Jugadores: " + jugadoresCount
+                + "\n║ Jugadores:"
+                + listaJugadores
+                + "\n╚══════════════════════════════╝";
     }
 
 }

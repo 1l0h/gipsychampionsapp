@@ -22,7 +22,7 @@ public class App {
 
     /**
      * Función principal para la ejecución del programa
-     * 
+     *
      * @param args posibles argumentos introducidos
      */
     public static void main(String[] args) {

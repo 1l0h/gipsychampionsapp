@@ -2,6 +2,7 @@ package org.palomafp.gipsychampionsapp.modelo;
 
 /**
  * Clase que representa las estadísticas de un jugador en una temporada
+ *
  * @author Sandoval y Lobato
  */
 public class StatsTempJugador {
@@ -31,15 +32,15 @@ public class StatsTempJugador {
     /**
      * Constructor para instanciar las estadísticas de un jugador con todos sus
      * atributos
-     * 
-     * @param goles             goles marcados por el jugador
-     * @param asistencias       asistencias realizadas por el jugador
-     * @param minJugados        minutos jugados por el jugador
+     *
+     * @param goles goles marcados por el jugador
+     * @param asistencias asistencias realizadas por el jugador
+     * @param minJugados minutos jugados por el jugador
      * @param tarjetasAmarillas tarjetas amarillas recibidas por el jugador
-     * @param tarjetasRojas     tarjetas rojas recibidas por el jugador
-     * @param porteriasACero    porterías a cero conseguidas por el jugador (si es
-     *                          portero si no, se puede dejar a 0)
-     * @param jugador           jugador al que pertenecen estas estadísticas
+     * @param tarjetasRojas tarjetas rojas recibidas por el jugador
+     * @param porteriasACero porterías a cero conseguidas por el jugador (si es
+     * portero si no, se puede dejar a 0)
+     * @param jugador jugador al que pertenecen estas estadísticas
      */
     public StatsTempJugador(int goles, int asistencias, int minJugados, int tarjetasAmarillas, int tarjetasRojas,
             int porteriasACero, Jugador jugador) {
@@ -54,10 +55,9 @@ public class StatsTempJugador {
 
     // Getters & Setters
     // Getters
-
     /**
      * Getter de los goles
-     * 
+     *
      * @return número de goles marcados por el jugador
      */
     public int getGoles() {
@@ -66,7 +66,7 @@ public class StatsTempJugador {
 
     /**
      * Getter de las asistencias
-     * 
+     *
      * @return número de asistencias realizadas por el jugador
      */
     public int getAsistencias() {
@@ -75,7 +75,7 @@ public class StatsTempJugador {
 
     /**
      * Getter de los minutos jugados
-     * 
+     *
      * @return número de minutos jugados por el jugador
      */
     public int getMinJugados() {
@@ -84,7 +84,7 @@ public class StatsTempJugador {
 
     /**
      * Getter de las tarjetas rojas
-     * 
+     *
      * @return número de tarjetas rojas recibidas por el jugador
      */
     public int getTarjetasRojas() {
@@ -93,7 +93,7 @@ public class StatsTempJugador {
 
     /**
      * Getter de las tarjetas amarillas
-     * 
+     *
      * @return número de tarjetas amarillas recibidas por el jugador
      */
     public int getTarjetasAmarillas() {
@@ -102,9 +102,9 @@ public class StatsTempJugador {
 
     /**
      * Getter de las porterías a cero
-     * 
-     * @return número de porterías a cero conseguidas por el jugador (si es portero
-     *         si no, se puede dejar a 0)
+     *
+     * @return número de porterías a cero conseguidas por el jugador (si es
+     * portero si no, se puede dejar a 0)
      */
     public int getPorteriasACero() {
         return porteriasACero;
@@ -112,7 +112,7 @@ public class StatsTempJugador {
 
     /**
      * Getter del jugador
-     * 
+     *
      * @return jugador al que pertenecen estas estadísticas
      */
     public Jugador getJugador() {
@@ -120,10 +120,9 @@ public class StatsTempJugador {
     }
 
     // Setters
-
     /**
      * Setter de los goles
-     * 
+     *
      * @param goles nuevo número de goles marcados por el jugador
      */
     public void setGoles(int goles) {
@@ -132,7 +131,7 @@ public class StatsTempJugador {
 
     /**
      * Setter de las asistencias
-     * 
+     *
      * @param asistencias nuevo número de asistencias realizadas por el jugador
      */
     public void setAsistencias(int asistencias) {
@@ -141,7 +140,7 @@ public class StatsTempJugador {
 
     /**
      * Setter de los minutos jugados
-     * 
+     *
      * @param minJugados nuevo número de minutos jugados por el jugador
      */
     public void setMinJugados(int minJugados) {
@@ -150,20 +149,20 @@ public class StatsTempJugador {
 
     /**
      * Setter de las tarjetas amarillas
-     * 
-     * @param tarjetasAmarillas nuevo número de tarjetas amarillas recibidas por el
-     *                          jugador
+     *
+     * @param tarjetasAmarillas nuevo número de tarjetas amarillas recibidas por
+     * el jugador
      */
     public void setTarjetasAmarillas(int tarjetasAmarillas) {
         this.tarjetasAmarillas = tarjetasAmarillas;
     }
 
     // Setters
-
     /**
      * Setter de las tarjetas rojas
-     * 
-     * @param tarjetasRojas nuevo número de tarjetas rojas recibidas por el jugador
+     *
+     * @param tarjetasRojas nuevo número de tarjetas rojas recibidas por el
+     * jugador
      */
     public void setTarjetasRojas(int tarjetasRojas) {
         this.tarjetasRojas = tarjetasRojas;
@@ -171,9 +170,9 @@ public class StatsTempJugador {
 
     /**
      * Setter de las porterías a cero
-     * 
+     *
      * @param porteriasACero nuevo número de porterías a cero conseguidas por el
-     *                       jugador (si es portero si no, se puede dejar a 0)
+     * jugador (si es portero si no, se puede dejar a 0)
      */
     public void setPorteriasACero(int porteriasACero) {
         this.porteriasACero = porteriasACero;
@@ -181,7 +180,7 @@ public class StatsTempJugador {
 
     /**
      * Setter del jugador
-     * 
+     *
      * @param jugador nuevo jugador al que pertenecen estas estadísticas
      */
     public void setJugador(Jugador jugador) {
@@ -189,9 +188,9 @@ public class StatsTempJugador {
     }
 
     /**
-     * toString para mostrar la información de las estadísticas del jugador de forma
-     * clara y estructurada
-     * incluyendo la información del jugador al que pertenecen estas estadísticas
+     * toString para mostrar la información de las estadísticas del jugador de
+     * forma clara y estructurada incluyendo la información del jugador al que
+     * pertenecen estas estadísticas
      */
     @Override
     public String toString() {

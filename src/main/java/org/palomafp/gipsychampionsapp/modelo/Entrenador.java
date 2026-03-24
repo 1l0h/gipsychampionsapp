@@ -2,6 +2,7 @@ package org.palomafp.gipsychampionsapp.modelo;
 
 /**
  * Clase que representa el entrenador de un equipo
+ *
  * @author Sandoval y Lobato
  */
 public class Entrenador {
@@ -24,11 +25,11 @@ public class Entrenador {
 
     /**
      * Constructor para instanciar un entrenador con todos sus atributos
-     * 
-     * @param idEntrenador   entero con su id
-     * @param nombre         string con su nombre
+     *
+     * @param idEntrenador entero con su id
+     * @param nombre string con su nombre
      * @param primerApellido string con su primer apellido
-     * @param dniNif         string con su dni/nif
+     * @param dniNif string con su dni/nif
      */
     public Entrenador(int idEntrenador, String nombre, String primerApellido, String dniNif) {
         this.idEntrenador = idEntrenador;
@@ -39,10 +40,9 @@ public class Entrenador {
 
     // Getters & Setters
     // Getters
-
     /**
      * Getter del id
-     * 
+     *
      * @return id del entrenador
      */
     public int getIdEntrenador() {
@@ -51,7 +51,7 @@ public class Entrenador {
 
     /**
      * Getter del nombre
-     * 
+     *
      * @return nombre del entrenador
      */
     public String getNombre() {
@@ -60,7 +60,7 @@ public class Entrenador {
 
     /**
      * Getter del apellido
-     * 
+     *
      * @return apellido del entrenador
      */
     public String getPrimerApellido() {
@@ -69,7 +69,7 @@ public class Entrenador {
 
     /**
      * Getter del dni/nif
-     * 
+     *
      * @return dni/nif del entrenador
      */
     public String getDniNif() {
@@ -78,7 +78,7 @@ public class Entrenador {
 
     /**
      * Getter del equipo al que entrena
-     * 
+     *
      * @return equipo del entrenador
      */
     public Equipo getEquipo() {
@@ -88,7 +88,7 @@ public class Entrenador {
     // Setters
     /**
      * Setter del id
-     * 
+     *
      * @param idEntrenador a atribuir para el entrenador
      */
     public void setIdEntrenador(int idEntrenador) {
@@ -97,7 +97,7 @@ public class Entrenador {
 
     /**
      * Setter del nombre
-     * 
+     *
      * @param nombre para atribuirle al entrenador
      */
     public void setNombre(String nombre) {
@@ -106,7 +106,7 @@ public class Entrenador {
 
     /**
      * Setter del apellido
-     * 
+     *
      * @param primerApellido para atribuirle al entrenador
      */
     public void setPrimerApellido(String primerApellido) {
@@ -115,7 +115,7 @@ public class Entrenador {
 
     /**
      * Setter del dni
-     * 
+     *
      * @param dniNif para atribuirle al entrenador
      */
     public void setDniNif(String dniNif) {
@@ -124,7 +124,7 @@ public class Entrenador {
 
     /**
      * Setter del equipo
-     * 
+     *
      * @param equipo para atribuirle al entrenador
      */
     public void setEquipo(Equipo equipo) {

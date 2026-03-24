@@ -2,6 +2,7 @@ package org.palomafp.gipsychampionsapp.modelo;
 
 /**
  * Clase que representa un jugador de un equipo
+ *
  * @author Sandoval y Lobato
  */
 public class Jugador {
@@ -24,11 +25,11 @@ public class Jugador {
 
     /**
      * Constructor para instanciar un jugador con todos sus atributos
-     * 
-     * @param idJugador      entero con su id
-     * @param nombre         string con su nombre
+     *
+     * @param idJugador entero con su id
+     * @param nombre string con su nombre
      * @param primerApellido string con su primer apellido
-     * @param dniNif         string con su dni/nif
+     * @param dniNif string con su dni/nif
      */
     public Jugador(int idJugador, String nombre, String primerApellido, String dniNif) {
         this.idJugador = idJugador;
@@ -39,10 +40,9 @@ public class Jugador {
 
     // Getters & Setters
     // Getters
-
     /**
      * Getter del id
-     * 
+     *
      * @return id del jugador
      */
     public int getIdJugador() {
@@ -51,7 +51,7 @@ public class Jugador {
 
     /**
      * Getter del nombre
-     * 
+     *
      * @return nombre del jugador
      */
     public String getNombre() {
@@ -60,7 +60,7 @@ public class Jugador {
 
     /**
      * Getter del primer apellido
-     * 
+     *
      * @return primer apellido del jugador
      */
     public String getPrimerApellido() {
@@ -69,7 +69,7 @@ public class Jugador {
 
     /**
      * Getter del dni/nif
-     * 
+     *
      * @return dni/nif del jugador
      */
     public String getDniNif() {
@@ -78,7 +78,7 @@ public class Jugador {
 
     /**
      * Getter del equipo
-     * 
+     *
      * @return equipo al que pertenece el jugador
      */
     public Equipo getEquipo() {
@@ -86,10 +86,9 @@ public class Jugador {
     }
 
     // Setters
-
     /**
      * Setter del id
-     * 
+     *
      * @param idJugador nuevo id del jugador
      */
     public void setIdJugador(int idJugador) {
@@ -98,7 +97,7 @@ public class Jugador {
 
     /**
      * Setter del nombre
-     * 
+     *
      * @param nombre nuevo nombre del jugador
      */
     public void setNombre(String nombre) {
@@ -107,7 +106,7 @@ public class Jugador {
 
     /**
      * Setter del primer apellido
-     * 
+     *
      * @param primerApellido nuevo primer apellido del jugador
      */
     public void setPrimerApellido(String primerApellido) {
@@ -116,7 +115,7 @@ public class Jugador {
 
     /**
      * Setter del dni/nif
-     * 
+     *
      * @param dniNif nuevo dni/nif del jugador
      */
     public void setDniNif(String dniNif) {
@@ -125,7 +124,7 @@ public class Jugador {
 
     /**
      * Setter del equipo
-     * 
+     *
      * @param equipo nuevo equipo del jugador
      */
     public void setEquipo(Equipo equipo) {
