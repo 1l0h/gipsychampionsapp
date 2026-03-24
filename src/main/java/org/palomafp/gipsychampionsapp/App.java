@@ -35,8 +35,8 @@ public class App {
         List<Equipo> listaEquipo = equipoDAO.getAllEquipos();
 
         // atributos que se usarán para responder el menú
-        int respuesta = 0;
-        int respuesta2 = 0;
+        int respuesta;
+        int respuesta2;
 
         // Bucle que se repetirá hasta que la opción introducida sea la de salir
         do {

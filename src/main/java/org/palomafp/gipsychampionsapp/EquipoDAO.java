@@ -10,15 +10,17 @@ import org.palomafp.gipsychampionsapp.modelo.Jugador;
 
 /**
  * Creación de la clase del objeto de acceso a datos
- * 
+ *
  * @author Sandoval y Lobato
  */
 public class EquipoDAO {
+
     // Arraylist privado que almacenará los equipos.
     private ArrayList<Equipo> listaEquipo = new ArrayList<Equipo>();
 
     /**
-     * Constructor por defecto sin parámetros para la instancia creada de la clase.
+     * Constructor por defecto sin parámetros para la instancia creada de la
+     * clase.
      */
     public EquipoDAO() {
         // Creación Real Vardrid
@@ -87,7 +89,7 @@ public class EquipoDAO {
     /**
      * Método que devolverá el equipo ubicado en el índice especificado del
      * arraylist
-     * 
+     *
      * @param indice Posición del arraylist sobre el que queremos el equipo
      * @return Objeto de la clase Equipo posicionado en el indice introducido
      */
@@ -97,8 +99,9 @@ public class EquipoDAO {
 
     /**
      * Método para obtener la lista de los equipos del objeto
-     * 
-     * @return Arraylist con los objetos creados anteriormente con el constructor
+     *
+     * @return Arraylist con los objetos creados anteriormente con el
+     * constructor
      */
     public ArrayList<Equipo> getAllEquipos() {
         return listaEquipo;
@@ -106,24 +109,24 @@ public class EquipoDAO {
 
     /**
      * Método para obtener un objeto de la clase Equipo aleatorio
-     * 
-     * @return Objeto de la clase Equipo obtenido aleatoriamente desde el arraylist
-     *         de la clase
+     *
+     * @return Objeto de la clase Equipo obtenido aleatoriamente desde el
+     * arraylist de la clase
      */
     public Equipo getEquipoAleatorio() {
-        return listaEquipo.get((int) Math.random() * (listaEquipo.size() - 1) + 0);
+        return listaEquipo.get((int) (Math.random() * listaEquipo.size()));
     }
 
     /**
-     * Método para añadir un nuevo equipo al objeto. Comprueba que el id del equipo
-     * esté disponible antes de añadirlo. En caso de que este no lo estuviese, no lo
-     * añadirá.
-     * 
-     * @param idEquipo     Id del equipo a añadir
+     * Método para añadir un nuevo equipo al objeto. Comprueba que el id del
+     * equipo esté disponible antes de añadirlo. En caso de que este no lo
+     * estuviese, no lo añadirá.
+     *
+     * @param idEquipo Id del equipo a añadir
      * @param nombreEquipo Nombre del equipo a añadir
      * @param ciudadEquipo Ciudad del equipo a añadir
-     * @return boolean que indicará true en caso de haber podido añadir el equipo o
-     *         false en caso de que no.
+     * @return boolean que indicará true en caso de haber podido añadir el
+     * equipo o false en caso de que no.
      */
     public boolean addEquipo(int idEquipo, String nombreEquipo, String ciudadEquipo) {
         // Boolean para indicar si el id está disponible
